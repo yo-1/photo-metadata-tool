@@ -5,7 +5,7 @@ py -m venv .venv
 if errorlevel 1 goto fail
 .venv\Scripts\python.exe -m pip install -r requirements.txt
 if errorlevel 1 goto fail
-.venv\Scripts\python.exe -m PyInstaller --noconfirm --clean --onedir --windowed --name PhotoMetadataManager src\photo_metadata_manager.py
+.venv\Scripts\python.exe -m PyInstaller --noconfirm --clean --onedir --windowed --add-data "metadata_catalog.json;." --name PhotoMetadataManager src\photo_metadata_manager.py
 if errorlevel 1 goto fail
 if not exist tools\exiftool.exe (
  echo Missing tools\exiftool.exe and tools\exiftool_files. See README.md.

@@ -30,7 +30,7 @@ class Window(QMainWindow):
         self.group=QComboBox();self.group.addItems(['すべて','EXIF/TIFF','GPS','MakerNotes','XMP','Composite','File/System','Other','Unclassified'])
         for w in [self.first,self.second,self.group,self.search]:selectors.addWidget(w)
         layout.addLayout(selectors)
-        self.table=QTableWidget(0,4);self.table.setHorizontalHeaderLabels(['分類','元タグ（グループ保持）','写真A','写真B'])
+        self.table=QTableWidget(0,5);self.table.setHorizontalHeaderLabels(['分類','項目名（日本語）','元タグ（グループ保持）','写真A（元の値）','写真B（元の値）'])
         self.table.setEditTriggers(QTableWidget.NoEditTriggers);layout.addWidget(self.table,1)
         edits=QHBoxLayout();self.field=QComboBox();self.field.addItems(core.FIELDS)
         self.value=QLineEdit();self.value.setPlaceholderText('変更後の値（緯度経度は十進度、日時はISO形式）')
@@ -95,11 +95,13 @@ class Window(QMainWindow):
         a=self.selected()['tags'];j=self.second.currentData();b=self.records[j]['tags'] if j is not None and j>=0 else {}
         query=self.search.text().lower();group=self.group.currentText()
         for k in sorted(set(a)|set(b)):
-            values=[core.category(k),k,json.dumps(a[k],ensure_ascii=False) if k in a else '—',json.dumps(b[k],ensure_ascii=False) if k in b else '—']
+            help_info=core.tag_help(k)
+            values=[core.category(k),help_info['label'],k,json.dumps(a[k],ensure_ascii=False) if k in a else '—',json.dumps(b[k],ensure_ascii=False) if k in b else '—']
             if group!='すべて' and values[0]!=group:continue
-            if query not in ' '.join(values).lower():continue
+            if query not in (' '.join(values)+' '+help_info['description']).lower():continue
             row=self.table.rowCount();self.table.insertRow(row)
-            for col,value in enumerate(values):self.table.setItem(row,col,QTableWidgetItem(value))
+            for col,value in enumerate(values):
+                item=QTableWidgetItem(value);item.setToolTip(help_info['description']);self.table.setItem(row,col,item)
         self.table.resizeColumnsToContents();self.show_plans()
     def stage(self):
         try:

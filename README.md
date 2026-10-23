@@ -1,4 +1,4 @@
-# 写真メタデータ管理ツール v0.1.0（試用版）
+# 写真メタデータ管理ツール v0.1.1（試用版）
 
 ## すぐ使う：ブラウザ版
 
@@ -76,3 +76,12 @@ node tests/test_web.cjs examples/SYNTHETIC_sample.jpg
 ソース・合成サンプル・テスト・検証記録をGitで管理します。実写真・実NMEA・出力ファイル・ビルド生成物・第三者バイナリは登録しません。GitHub上のCIはコア処理とJavaScriptの自動検査を実行する設定です。CIの合格はWindows EXE・実機・ブラウザ操作の合格を意味しません。
 
 Gitから取得した場合は `tools/README.md` に従ってExifToolを配置してください。初回配布ZIPとGit管理版では、ExifToolバイナリの同梱有無が異なります。
+
+
+## v0.1.1：項目の意味を確認
+
+ブラウザ版は日本語名、読みやすい値、タップして開く「意味・注意点」「元の値」を表示します。日本語で検索もできます。説明辞書は107項目。未登録の項目・メーカー固有のコードは推測せず表示します。Windows用ソースにも日本語名・説明ツールチップを追加しています。
+
+APEX方式の絞り・シャッター速度はブラウザ直接読取の場合に換算し、ExifToolの変換済み値を二重変換しません。換算は表示だけで、元タグ・JSON台帳・既存CSVの値は変えません。説明の正本は `metadata_catalog.json` です。単体HTML用に `build_web.py` が辞書を埋め込みます。
+
+説明の確認元：ExifTool 13.59同梱のEXIF/GPS/DNG定義、[ExifTool EXIFタグ定義](https://exiftool.org/TagNames/EXIF.html)、[Adobe EXIF namespace](https://github.com/adobe/xmp-docs/blob/master/XMPNamespaces/exif.md)、[米国議会図書館TIFFタグ一覧](https://www.loc.gov/preservation/digital/formats/content/tiff_tags.shtml)。説明文は本ツール向けに要約しています。メーカー固有の姿勢の意味・精度は別途検証します。

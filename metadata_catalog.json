@@ -1,0 +1,594 @@
+{
+  "SourceFile": {
+    "label": "対象ファイル",
+    "description": "読み込んだ写真のファイル名またはパス。撮影情報そのものではありません。"
+  },
+  "Make": {
+    "label": "カメラメーカー",
+    "description": "写真を記録したカメラのメーカー名。"
+  },
+  "Model": {
+    "label": "カメラ機種",
+    "description": "カメラが記録した機種名。"
+  },
+  "LensModel": {
+    "label": "レンズ名",
+    "description": "使用したレンズの名称。"
+  },
+  "LensMake": {
+    "label": "レンズメーカー",
+    "description": "使用したレンズのメーカー名。"
+  },
+  "Software": {
+    "label": "記録・編集ソフト",
+    "description": "カメラのファームウェアや、画像を保存・編集したソフトの名称。"
+  },
+  "DateTimeOriginal": {
+    "label": "撮影日時",
+    "description": "元の画像を撮影した日時。小数秒・UTC時差は別タグの場合があります。この値だけでは露光との同期精度は確定しません。"
+  },
+  "CreateDate": {
+    "label": "デジタル化日時",
+    "description": "画像をデジタルデータにした日時。デジタルカメラでは撮影日時と同じことがあります。ファイル作成日時とは別です。"
+  },
+  "ModifyDate": {
+    "label": "画像情報の更新日時",
+    "description": "画像のメタデータに記録された更新日時。ファイルシステムの更新日時とは別です。"
+  },
+  "OffsetTime": {
+    "label": "更新日時のUTC時差",
+    "description": "ModifyDateに対応するUTCからの時差。+09:00なら日本標準時です。"
+  },
+  "OffsetTimeOriginal": {
+    "label": "撮影日時のUTC時差",
+    "description": "DateTimeOriginalに対応するUTCからの時差。未記録なら日時だけでUTCを確定しません。"
+  },
+  "OffsetTimeDigitized": {
+    "label": "デジタル化日時のUTC時差",
+    "description": "CreateDateに対応するUTCからの時差。"
+  },
+  "SubSecTime": {
+    "label": "更新日時の小数秒",
+    "description": "ModifyDateの秒未満部分。文字列の先頭の0にも意味があります。"
+  },
+  "SubSecTimeOriginal": {
+    "label": "撮影日時の小数秒",
+    "description": "DateTimeOriginalの秒未満部分。例：123は0.123秒。記録桁数は実際の時刻精度を保証しません。"
+  },
+  "SubSecTimeDigitized": {
+    "label": "デジタル化日時の小数秒",
+    "description": "CreateDateの秒未満部分。"
+  },
+  "Artist": {
+    "label": "撮影者・作成者",
+    "description": "写真に記録された撮影者または作成者名。"
+  },
+  "Copyright": {
+    "label": "著作権表記",
+    "description": "画像に記録された著作権の表記。"
+  },
+  "ImageDescription": {
+    "label": "画像の説明",
+    "description": "画像に付けられた説明文。"
+  },
+  "Description": {
+    "label": "画像の説明",
+    "description": "XMPで追加・管理する説明文。元のEXIFとは別領域です。"
+  },
+  "Rights": {
+    "label": "権利情報",
+    "description": "XMPで追加・管理する著作権などの権利表記。"
+  },
+  "Label": {
+    "label": "ラベル",
+    "description": "分類や作業状態を示す自由な文字列。"
+  },
+  "Rating": {
+    "label": "評価",
+    "description": "-1は却下、0は未評価、1〜5は評価段階。"
+  },
+  "BodySerialNumber": {
+    "label": "カメラ製造番号",
+    "description": "カメラ本体を識別する製造番号。"
+  },
+  "LensSerialNumber": {
+    "label": "レンズ製造番号",
+    "description": "レンズを識別する製造番号。"
+  },
+  "ImageUniqueID": {
+    "label": "画像識別子",
+    "description": "画像に記録された識別用の文字列。"
+  },
+  "GPSDateStamp": {
+    "label": "GPS日付（UTC）",
+    "description": "GPS情報の日付。撮影日時とは別に記録され、実露光時刻との関係は機種ごとに確認が必要です。"
+  },
+  "GPSTimeStamp": {
+    "label": "GPS時刻（UTC）",
+    "description": "GPS情報の時・分・秒。GPS日付と組み合わせて使用します。"
+  },
+  "GPSMapDatum": {
+    "label": "GPS測地系",
+    "description": "GPS座標の基準となる測地系の名称。"
+  },
+  "GPSSatellites": {
+    "label": "GPS使用衛星情報",
+    "description": "測位に使用した衛星に関する記録。必ずしも単純な衛星数とは限りません。"
+  },
+  "GPSDOP": {
+    "label": "GPSのDOP",
+    "description": "衛星配置に由来する精度低下の指標。値だけを測位誤差mと読み替えません。"
+  },
+  "LensInfo": {
+    "label": "レンズの仕様",
+    "description": "焦点距離や開放F値等の組合せ。配列の項目順序に注意してください。"
+  },
+  "MakerNoteByteCount": {
+    "label": "メーカー固有情報のサイズ",
+    "description": "MakerNotes領域のバイト数です。姿勢角などのメーカー固有値を解読した結果ではありません。"
+  },
+  "StripOffsets": {
+    "label": "画像データの格納位置",
+    "description": "TIFF内の画像ストリップの位置。写真の地理的な位置ではありません。"
+  },
+  "StripByteCounts": {
+    "label": "画像データのサイズ",
+    "description": "TIFFの各ストリップのデータ量。"
+  },
+  "RowsPerStrip": {
+    "label": "ストリップ当たりの行数",
+    "description": "TIFF画像データを分割して格納する際の行数。"
+  },
+  "TileWidth": {
+    "label": "内部タイルの幅",
+    "description": "TIFF内部の画像格納単位の幅。地図タイルの幅ではありません。"
+  },
+  "TileLength": {
+    "label": "内部タイルの高さ",
+    "description": "TIFF内部の画像格納単位の高さ。"
+  },
+  "TileOffsets": {
+    "label": "内部タイルの格納位置",
+    "description": "ファイル内部の各画像タイルの位置。"
+  },
+  "TileByteCounts": {
+    "label": "内部タイルのサイズ",
+    "description": "各画像タイルのデータ量。"
+  },
+  "CFAPattern": {
+    "label": "カラーフィルター配列",
+    "description": "RAWセンサーの色フィルターの配置。データ形式によって解釈が異なります。"
+  },
+  "CFARepeatPatternDim": {
+    "label": "色フィルター配列の繰返し寸法",
+    "description": "CFAパターンが繰り返す行数・列数。"
+  },
+  "BitsPerSample": {
+    "label": "サンプル当たりのビット数",
+    "description": "各色成分やRAWサンプルの記録ビット数。"
+  },
+  "SamplesPerPixel": {
+    "label": "画素当たりの成分数",
+    "description": "1画素を構成する色成分などの個数。"
+  },
+  "ExposureTime": {
+    "label": "シャッター速度",
+    "description": "露光していた時間。秒単位で記録されています。",
+    "kind": "seconds"
+  },
+  "FNumber": {
+    "label": "絞り（F値）",
+    "description": "撮影時のF値。数値が小さいほど絞りが開いています。",
+    "kind": "fnumber"
+  },
+  "ApertureValue": {
+    "label": "絞り（APEX値）",
+    "description": "標準EXIFではAPEX方式の数値です。ブラウザ直接読取ではF値へ換算して表示します。ExifTool抽出値は変換済みの場合があります。",
+    "kind": "aperture"
+  },
+  "MaxApertureValue": {
+    "label": "開放絞り",
+    "description": "レンズの開放絞りを表すAPEX値。撮影時の絞りとは別です。",
+    "kind": "aperture"
+  },
+  "ShutterSpeedValue": {
+    "label": "シャッター速度（APEX値）",
+    "description": "標準EXIFではAPEX方式のシャッター速度。ブラウザ直接読取では秒へ換算して表示します。",
+    "kind": "shutter"
+  },
+  "ExposureCompensation": {
+    "label": "露出補正",
+    "description": "カメラの基準露出に対する補正量。0 EVは補正なしです。",
+    "kind": "ev"
+  },
+  "FocalLength": {
+    "label": "焦点距離",
+    "description": "撮影時のレンズの焦点距離。35mm判換算値とは区別します。",
+    "kind": "mm"
+  },
+  "FocalLengthIn35mmFormat": {
+    "label": "35mm判換算焦点距離",
+    "description": "35mm判カメラの画角に換算した焦点距離。実際の焦点距離とは別です。",
+    "kind": "mm"
+  },
+  "ISO": {
+    "label": "ISO感度",
+    "description": "撮影時のISO感度。値が大きいほど高感度です。",
+    "kind": "iso"
+  },
+  "ImageWidth": {
+    "label": "画像の幅",
+    "description": "このIFDが示す画像の横画素数。RAW本体・プレビューで異なる場合があります。",
+    "kind": "pixels"
+  },
+  "ImageHeight": {
+    "label": "画像の高さ",
+    "description": "このIFDが示す画像の縦画素数。RAW本体・プレビューで異なる場合があります。",
+    "kind": "pixels"
+  },
+  "ExifImageWidth": {
+    "label": "EXIF画像の幅",
+    "description": "EXIFに記録された横画素数。",
+    "kind": "pixels"
+  },
+  "ExifImageHeight": {
+    "label": "EXIF画像の高さ",
+    "description": "EXIFに記録された縦画素数。",
+    "kind": "pixels"
+  },
+  "ExifVersion": {
+    "label": "EXIF規格の版",
+    "description": "この画像が使用するEXIF規格のバージョン。機能の全項目が記録されていることは意味しません。",
+    "kind": "version"
+  },
+  "FlashpixVersion": {
+    "label": "Flashpix規格の版",
+    "description": "画像に記録されたFlashpix規格の版。",
+    "kind": "version"
+  },
+  "GPSLatitude": {
+    "label": "緯度",
+    "description": "写真に記録された緯度。EXIFでは度・分・秒と南北区分を組み合わせます。",
+    "kind": "latitude"
+  },
+  "GPSLongitude": {
+    "label": "経度",
+    "description": "写真に記録された経度。EXIFでは度・分・秒と東西区分を組み合わせます。",
+    "kind": "longitude"
+  },
+  "GPSAltitude": {
+    "label": "GPS高度",
+    "description": "GPSAltitudeRefと合わせて読む高度。基準の確認なしにGNSS楕円体高等と比較しません。",
+    "kind": "altitude"
+  },
+  "GPSImgDirection": {
+    "label": "撮影方向",
+    "description": "撮影方向の角度。真北／磁北はGPSImgDirectionRefで確認します。機体や移動の向きとは別です。",
+    "kind": "degrees"
+  },
+  "GPSTrack": {
+    "label": "移動方向",
+    "description": "測位地点の移動方向。カメラが向いていた方向とは限りません。",
+    "kind": "degrees"
+  },
+  "ExposureProgram": {
+    "label": "露出プログラム",
+    "description": "露出を決める撮影モード。",
+    "kind": "enum",
+    "values": {
+      "0": "未定義",
+      "1": "マニュアル",
+      "2": "通常プログラム",
+      "3": "絞り優先",
+      "4": "シャッター優先",
+      "5": "被写界深度優先プログラム",
+      "6": "動き優先プログラム",
+      "7": "ポートレート",
+      "8": "風景"
+    }
+  },
+  "ExposureMode": {
+    "label": "露出制御",
+    "description": "自動露出・マニュアル・オートブラケットの区分。",
+    "kind": "enum",
+    "values": {
+      "0": "自動露出",
+      "1": "マニュアル露出",
+      "2": "オートブラケット"
+    }
+  },
+  "WhiteBalance": {
+    "label": "ホワイトバランス",
+    "description": "色合いの補正を自動／手動のどちらで行ったか。",
+    "kind": "enum",
+    "values": {
+      "0": "自動",
+      "1": "手動"
+    }
+  },
+  "Orientation": {
+    "label": "画像の表示方向",
+    "description": "表示用の回転・反転指定。連続したロール角・ピッチ角ではありません。",
+    "kind": "enum",
+    "values": {
+      "1": "通常",
+      "2": "左右反転",
+      "3": "180°回転",
+      "4": "上下反転",
+      "5": "転置（反転を含む）",
+      "6": "90°時計回り",
+      "7": "横転置（反転を含む）",
+      "8": "90°反時計回り"
+    }
+  },
+  "ColorSpace": {
+    "label": "色空間",
+    "description": "色の表現に用いる空間の識別値。",
+    "kind": "enum",
+    "values": {
+      "1": "sRGB",
+      "2": "Adobe RGB",
+      "65535": "未校正／その他"
+    }
+  },
+  "MeteringMode": {
+    "label": "測光方式",
+    "description": "明るさを測って露出を決める方法。",
+    "kind": "enum",
+    "values": {
+      "0": "不明",
+      "1": "平均測光",
+      "2": "中央重点平均測光",
+      "3": "スポット測光",
+      "4": "マルチスポット",
+      "5": "分割測光",
+      "6": "部分測光",
+      "255": "その他"
+    }
+  },
+  "ResolutionUnit": {
+    "label": "解像度の単位",
+    "description": "XResolution・YResolutionの長さの単位。",
+    "kind": "enum",
+    "values": {
+      "1": "単位なし",
+      "2": "インチ",
+      "3": "センチメートル"
+    }
+  },
+  "GPSLatitudeRef": {
+    "label": "緯度の南北区分",
+    "description": "緯度と組み合わせる方位。",
+    "kind": "enum",
+    "values": {
+      "N": "北緯",
+      "S": "南緯"
+    }
+  },
+  "GPSLongitudeRef": {
+    "label": "経度の東西区分",
+    "description": "経度と組み合わせる方位。",
+    "kind": "enum",
+    "values": {
+      "E": "東経",
+      "W": "西経"
+    }
+  },
+  "GPSAltitudeRef": {
+    "label": "高度の基準・符号",
+    "description": "基準より上か下かを示す区分。",
+    "kind": "enum",
+    "values": {
+      "0": "海面より上",
+      "1": "海面より下"
+    }
+  },
+  "GPSImgDirectionRef": {
+    "label": "撮影方向の基準",
+    "description": "角度の0°が真北か磁北かを示します。",
+    "kind": "enum",
+    "values": {
+      "T": "真北",
+      "M": "磁北"
+    }
+  },
+  "GPSTrackRef": {
+    "label": "移動方向の基準",
+    "description": "移動方向角の基準となる北。",
+    "kind": "enum",
+    "values": {
+      "T": "真北",
+      "M": "磁北"
+    }
+  },
+  "GPSSpeedRef": {
+    "label": "GPS速度の単位",
+    "description": "GPSSpeedの単位。",
+    "kind": "enum",
+    "values": {
+      "K": "km/h",
+      "M": "mph",
+      "N": "ノット"
+    }
+  },
+  "GPSStatus": {
+    "label": "GPS測位状態",
+    "description": "GPS情報に記録された測位状態。RTK Fixed/Floatを示すタグではありません。",
+    "kind": "enum",
+    "values": {
+      "A": "測位有効",
+      "V": "測位無効"
+    }
+  },
+  "GPSMeasureMode": {
+    "label": "GPS測位方式",
+    "description": "2次元または3次元で測位した区分。",
+    "kind": "enum",
+    "values": {
+      "2": "2次元測位",
+      "3": "3次元測位"
+    }
+  },
+  "Compression": {
+    "label": "画像の圧縮方式",
+    "description": "画像データの格納・圧縮方法。",
+    "kind": "enum",
+    "values": {
+      "1": "非圧縮",
+      "5": "LZW",
+      "6": "旧JPEG",
+      "7": "JPEG",
+      "8": "Deflate",
+      "32773": "PackBits",
+      "34892": "非可逆JPEG"
+    }
+  },
+  "PhotometricInterpretation": {
+    "label": "画素の色表現",
+    "description": "画素値を色や明るさとして解釈する方法。",
+    "kind": "enum",
+    "values": {
+      "0": "白が0のグレースケール",
+      "1": "黒が0のグレースケール",
+      "2": "RGB",
+      "3": "パレット",
+      "6": "YCbCr",
+      "32803": "CFA（RAW色配列）",
+      "34892": "Linear RAW"
+    }
+  },
+  "PlanarConfiguration": {
+    "label": "色成分の格納順",
+    "description": "色成分を画素ごとに格納するか、成分ごとに分けるか。",
+    "kind": "enum",
+    "values": {
+      "1": "画素ごと",
+      "2": "色成分ごと"
+    }
+  },
+  "XResolution": {
+    "label": "横方向の印刷解像度",
+    "description": "ResolutionUnit当たりの横画素密度。地上解像度や位置精度ではありません。"
+  },
+  "YResolution": {
+    "label": "縦方向の印刷解像度",
+    "description": "ResolutionUnit当たりの縦画素密度。地上解像度や位置精度ではありません。"
+  },
+  "GPSVersionID": {
+    "label": "GPSタグ規格の版",
+    "description": "GPSメタデータのバージョン。"
+  },
+  "GPSSpeed": {
+    "label": "GPS速度",
+    "description": "GPSに記録された移動速度。単位はGPSSpeedRefで確認します。"
+  },
+  "Flash": {
+    "label": "フラッシュの状態",
+    "description": "発光・戻り光・モード等をビット単位で記録した値。未解読の数値を単純な有無と見なしません。"
+  },
+  "DNGVersion": {
+    "label": "DNG規格の版",
+    "description": "DNGファイルの規格バージョン。",
+    "tag_id": 50706
+  },
+  "DNGBackwardVersion": {
+    "label": "DNG互換性の版",
+    "description": "このDNGを読む際に必要となる互換性の版。",
+    "tag_id": 50707
+  },
+  "UniqueCameraModel": {
+    "label": "カメラモデル識別名",
+    "description": "DNGに記録された固有のカメラ機種識別名。",
+    "tag_id": 50708
+  },
+  "LocalizedCameraModel": {
+    "label": "機種名（ローカライズ）",
+    "description": "表示言語に対応したカメラモデル名。",
+    "tag_id": 50709
+  },
+  "CFAPlaneColor": {
+    "label": "RAWの色成分対応",
+    "description": "CFAの成分番号を色に対応付ける情報。",
+    "tag_id": 50710
+  },
+  "CFALayout": {
+    "label": "RAW色配列の配置方式",
+    "description": "CFA画素の幾何的な配置方式。",
+    "tag_id": 50711
+  },
+  "LinearizationTable": {
+    "label": "RAW線形化テーブル",
+    "description": "RAWの記録値を線形の値へ変換するための表。",
+    "tag_id": 50712
+  },
+  "BlackLevelRepeatDim": {
+    "label": "黒レベルの繰返し寸法",
+    "description": "黒レベル補正パターンの繰返し行数・列数。",
+    "tag_id": 50713
+  },
+  "BlackLevel": {
+    "label": "RAWの黒レベル",
+    "description": "光が入らないときのRAW記録値の基準。",
+    "tag_id": 50714
+  },
+  "WhiteLevel": {
+    "label": "RAWの飽和レベル",
+    "description": "RAW記録値で飽和に相当する値。",
+    "tag_id": 50717
+  },
+  "DefaultScale": {
+    "label": "RAWの標準倍率",
+    "description": "RAW画素から標準表示へ変換する際の倍率。",
+    "tag_id": 50718
+  },
+  "DefaultCropOrigin": {
+    "label": "標準クロップの開始位置",
+    "description": "RAW画像内で標準切出し範囲が始まる位置。",
+    "tag_id": 50719
+  },
+  "DefaultCropSize": {
+    "label": "標準クロップの寸法",
+    "description": "RAW画像から標準的に切り出す範囲の幅・高さ。",
+    "tag_id": 50720
+  },
+  "ColorMatrix1": {
+    "label": "色変換行列1",
+    "description": "基準光源1に対応する色変換用の行列。撮影姿勢の回転行列ではありません。",
+    "tag_id": 50721
+  },
+  "ColorMatrix2": {
+    "label": "色変換行列2",
+    "description": "基準光源2に対応する色変換用の行列。",
+    "tag_id": 50722
+  },
+  "AsShotNeutral": {
+    "label": "撮影時のホワイトバランス基準",
+    "description": "撮影時の中立色を表すRAWのホワイトバランス情報。",
+    "tag_id": 50728
+  },
+  "BaselineExposure": {
+    "label": "RAWの基準露出補正",
+    "description": "DNG現像時の基準となる露出補正量。",
+    "tag_id": 50730
+  },
+  "CalibrationIlluminant1": {
+    "label": "色校正の光源1",
+    "description": "色変換行列1の基準光源。",
+    "tag_id": 50778
+  },
+  "CalibrationIlluminant2": {
+    "label": "色校正の光源2",
+    "description": "色変換行列2の基準光源。",
+    "tag_id": 50779
+  },
+  "ActiveArea": {
+    "label": "センサーの有効領域",
+    "description": "RAWセンサーの有効な画像範囲（上・左・下・右）。",
+    "tag_id": 50829
+  },
+  "MaskedAreas": {
+    "label": "センサーのマスク領域",
+    "description": "黒レベル等の参照に使われる画像外の領域。",
+    "tag_id": 50830
+  }
+}

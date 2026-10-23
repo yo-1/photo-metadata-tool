@@ -1,4 +1,5 @@
 """Photo metadata v0.1: grouped evidence, XMP edits, immutable originals."""
+from functools import lru_cache
 import csv
 import hashlib
 import io
@@ -13,7 +14,7 @@ import sys
 import tempfile
 import xml.etree.ElementTree as ET
 
-VERSION = '0.1.0'
+VERSION = '0.1.1'
 NS = {'x':'adobe:ns:meta/', 'rdf':'http://www.w3.org/1999/02/22-rdf-syntax-ns#',
       'dc':'http://purl.org/dc/elements/1.1/', 'xmp':'http://ns.adobe.com/xap/1.0/',
       'exif':'http://ns.adobe.com/exif/1.0/'}
@@ -22,6 +23,19 @@ FIELDS = {'Description':('dc','description'), 'Rights':('dc','rights'),
           'DateTimeOriginal':('exif','DateTimeOriginal'),
           'GPSLatitude':('exif','GPSLatitude'), 'GPSLongitude':('exif','GPSLongitude')}
 SUPPORTED = {'.pef','.dng','.jpg','.jpeg','.tif','.tiff','.orf','.rw2','.cr2','.cr3','.nef','.arw'}
+
+
+@lru_cache(maxsize=1)
+def load_catalog():
+    base=Path(getattr(sys,'_MEIPASS',Path(__file__).resolve().parent.parent))
+    return json.loads((base/'metadata_catalog.json').read_text(encoding='utf-8'))
+
+
+def tag_help(key):
+    group=category(key); name=key.split(':')[-1]
+    allowed=group not in {'MakerNotes','Other','Unclassified'} or name=='MakerNoteByteCount' or key=='SourceFile'
+    info=load_catalog().get(name) if allowed else None
+    return info or {'label':name,'description':'説明未登録のタグです。メーカー固有値の意味・単位は機種ごとの確認が必要です。'}
 
 
 def category(key):
