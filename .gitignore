@@ -1,4 +1,18 @@
-.venv/
 __pycache__/
+*.py[cod]
+.venv/
 build/
 dist/
+*.spec
+.openai/
+# Local vendor binaries: provision separately from the received ExifTool archive.
+tools/*
+!tools/README.md
+# Real photographs, logs and project-specific exports stay outside source control.
+*.pef
+*.PEF
+*.dng
+*.DNG
+*.nmea
+*.log
+*.audit.json

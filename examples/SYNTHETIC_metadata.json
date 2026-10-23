@@ -1,0 +1,47 @@
+{
+  "records": [
+    {
+      "source": "SYNTHETIC_sample.jpg",
+      "tags": {
+        "SourceFile": "SYNTHETIC_sample.jpg",
+        "ExifTool:ExifToolVersion": 13.59,
+        "File:System:FileName": "SYNTHETIC_sample.jpg",
+        "File:System:FileSize": 837,
+        "File:System:FileModifyDate": "2026:10:23 19:53:45+08:00",
+        "File:System:FileAccessDate": "2026:10:23 19:53:45+08:00",
+        "File:System:FileInodeChangeDate": "2026:10:23 19:53:45+08:00",
+        "File:System:FilePermissions": 100644,
+        "File:FileType": "JPEG",
+        "File:FileTypeExtension": "JPG",
+        "File:MIMEType": "image/jpeg",
+        "File:ExifByteOrder": "MM",
+        "File:ImageWidth": 20,
+        "File:ImageHeight": 20,
+        "File:EncodingProcess": 0,
+        "File:BitsPerSample": 8,
+        "File:ColorComponents": 3,
+        "File:YCbCrSubSampling": "2 2",
+        "JFIF:JFIFVersion": "1 1",
+        "JFIF:Copy1:ResolutionUnit": 0,
+        "JFIF:Copy1:XResolution": 1,
+        "JFIF:Copy1:YResolution": 1,
+        "EXIF:IFD0:Make": "PENTAX",
+        "EXIF:IFD0:XResolution": 1,
+        "EXIF:IFD0:YResolution": 1,
+        "EXIF:IFD0:ResolutionUnit": 1,
+        "EXIF:IFD0:YCbCrPositioning": 1,
+        "EXIF:ExifIFD:ExifVersion": "0232",
+        "EXIF:ExifIFD:DateTimeOriginal": "2026:10:23 20:00:00",
+        "EXIF:ExifIFD:ComponentsConfiguration": "1 2 3 0",
+        "EXIF:ExifIFD:ColorSpace": 65535,
+        "Composite:ImageSize": "20 20",
+        "Composite:Megapixels": 0.0004
+      },
+      "reader": "ExifTool numeric / G0:1:4",
+      "warnings": [
+        "合成画像です。実カメラの検証結果ではありません。"
+      ]
+    }
+  ],
+  "plans": []
+}
